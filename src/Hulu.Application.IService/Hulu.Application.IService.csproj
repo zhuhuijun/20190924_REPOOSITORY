@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8A96A08E-BF13-4701-94E6-86D78A7913C1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hulu.Application.IService</RootNamespace>
+    <AssemblyName>Hulu.Application.IService</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoCode\IBase_AreaService.cs" />
+    <Compile Include="AutoCode\IBase_AuthorizeDataService.cs" />
+    <Compile Include="AutoCode\IBase_AuthorizeService.cs" />
+    <Compile Include="AutoCode\IBase_CodeRuleSeedService.cs" />
+    <Compile Include="AutoCode\IBase_CodeRuleService.cs" />
+    <Compile Include="AutoCode\IBase_DataBaseBackupService.cs" />
+    <Compile Include="AutoCode\IBase_DataDaseLinkService.cs" />
+    <Compile Include="AutoCode\IBase_DataItemDetailService.cs" />
+    <Compile Include="AutoCode\IBase_DataItemService.cs" />
+    <Compile Include="AutoCode\IBase_DepartmentService.cs" />
+    <Compile Include="AutoCode\IBase_FileFolderService.cs" />
+    <Compile Include="AutoCode\IBase_FileInfoService.cs" />
+    <Compile Include="AutoCode\IBase_FilterIpService.cs" />
+    <Compile Include="AutoCode\IBase_FilterTimeService.cs" />
+    <Compile Include="AutoCode\IBase_LogService.cs" />
+    <Compile Include="AutoCode\IBase_ModuleButtonService.cs" />
+    <Compile Include="AutoCode\IBase_ModuleColumnService.cs" />
+    <Compile Include="AutoCode\IBase_ModuleFormInstanceService.cs" />
+    <Compile Include="AutoCode\IBase_ModuleFormService.cs" />
+    <Compile Include="AutoCode\IBase_ModuleService.cs" />
+    <Compile Include="AutoCode\IBase_NewsService.cs" />
+    <Compile Include="AutoCode\IBase_OrganizeService.cs" />
+    <Compile Include="AutoCode\IBase_RoleService.cs" />
+    <Compile Include="AutoCode\IBase_ScheduleService.cs" />
+    <Compile Include="AutoCode\IBase_UserRelationService.cs" />
+    <Compile Include="AutoCode\IBase_UserService.cs" />
+    <Compile Include="AutoCode\IClient_CashBalanceService.cs" />
+    <Compile Include="AutoCode\IClient_ChanceService.cs" />
+    <Compile Include="AutoCode\IClient_CustomerContactService.cs" />
+    <Compile Include="AutoCode\IClient_CustomerService.cs" />
+    <Compile Include="AutoCode\IClient_ExpensesService.cs" />
+    <Compile Include="AutoCode\IClient_InvoiceService.cs" />
+    <Compile Include="AutoCode\IClient_OrderEntryService.cs" />
+    <Compile Include="AutoCode\IClient_OrderService.cs" />
+    <Compile Include="AutoCode\IClient_ReceivableService.cs" />
+    <Compile Include="AutoCode\IClient_TrailRecordService.cs" />
+    <Compile Include="AutoCode\IEmail_AddresseeService.cs" />
+    <Compile Include="AutoCode\IEmail_CategoryService.cs" />
+    <Compile Include="AutoCode\IEmail_ContentService.cs" />
+    <Compile Include="AutoCode\IIM_ContentService.cs" />
+    <Compile Include="AutoCode\IIM_GroupService.cs" />
+    <Compile Include="AutoCode\IIM_ReadService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\IIM_UserGroupService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\IRpt_TempService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\ITestFlow_LeaveslipService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\IWechat_AppService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\IWechat_DeptrelationService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\IWechat_UserRelationService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\IWF_DelegateRecordService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\IWF_DelegateRuleSchemeInfoService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\IWF_DelegateRuleService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\IWF_FrmMainService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\IWF_ProcessInstanceService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\IWF_ProcessOperationHistoryService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\IWF_ProcessSchemeService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\IWF_ProcessTransitionHistoryService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\IWF_SchemeContentService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\IWF_SchemeInfoAuthorizeService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\IWF_SchemeInfoService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\aaTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Hulu.Util.Model\Hulu.Util.Model.csproj">
+      <Project>{11af6c78-bf65-4e31-80ad-bab75946fdd2}</Project>
+      <Name>Hulu.Util.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AutoCode\aaTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>aaTemplate.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

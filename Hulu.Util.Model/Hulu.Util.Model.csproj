@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{11AF6C78-BF65-4E31-80AD-BAB75946FDD2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hulu.Util.Model</RootNamespace>
+    <AssemblyName>Hulu.Util.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.17.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoCode\Base_AreaEntity.cs" />
+    <Compile Include="AutoCode\Base_AuthorizeDataEntity.cs" />
+    <Compile Include="AutoCode\Base_AuthorizeEntity.cs" />
+    <Compile Include="AutoCode\Base_CodeRuleEntity.cs" />
+    <Compile Include="AutoCode\Base_CodeRuleSeedEntity.cs" />
+    <Compile Include="AutoCode\Base_DataBaseBackupEntity.cs" />
+    <Compile Include="AutoCode\Base_DataDaseLinkEntity.cs" />
+    <Compile Include="AutoCode\Base_DataItemDetailEntity.cs" />
+    <Compile Include="AutoCode\Base_DataItemEntity.cs" />
+    <Compile Include="AutoCode\Base_DepartmentEntity.cs" />
+    <Compile Include="AutoCode\Base_FileFolderEntity.cs" />
+    <Compile Include="AutoCode\Base_FileInfoEntity.cs" />
+    <Compile Include="AutoCode\Base_FilterIpEntity.cs" />
+    <Compile Include="AutoCode\Base_FilterTimeEntity.cs" />
+    <Compile Include="AutoCode\Base_LogEntity.cs" />
+    <Compile Include="AutoCode\Base_ModuleButtonEntity.cs" />
+    <Compile Include="AutoCode\Base_ModuleColumnEntity.cs" />
+    <Compile Include="AutoCode\Base_ModuleEntity.cs" />
+    <Compile Include="AutoCode\Base_ModuleFormEntity.cs" />
+    <Compile Include="AutoCode\Base_ModuleFormInstanceEntity.cs" />
+    <Compile Include="AutoCode\Base_NewsEntity.cs" />
+    <Compile Include="AutoCode\Base_OrganizeEntity.cs" />
+    <Compile Include="AutoCode\Base_RoleEntity.cs" />
+    <Compile Include="AutoCode\Base_ScheduleEntity.cs" />
+    <Compile Include="AutoCode\Base_UserEntity.cs" />
+    <Compile Include="AutoCode\Base_UserRelationEntity.cs" />
+    <Compile Include="AutoCode\Client_CashBalanceEntity.cs" />
+    <Compile Include="AutoCode\Client_ChanceEntity.cs" />
+    <Compile Include="AutoCode\Client_CustomerContactEntity.cs" />
+    <Compile Include="AutoCode\Client_CustomerEntity.cs" />
+    <Compile Include="AutoCode\Client_ExpensesEntity.cs" />
+    <Compile Include="AutoCode\Client_InvoiceEntity.cs" />
+    <Compile Include="AutoCode\Client_OrderEntity.cs" />
+    <Compile Include="AutoCode\Client_OrderEntryEntity.cs" />
+    <Compile Include="AutoCode\Client_ReceivableEntity.cs" />
+    <Compile Include="AutoCode\Client_TrailRecordEntity.cs" />
+    <Compile Include="AutoCode\Email_AddresseeEntity.cs" />
+    <Compile Include="AutoCode\Email_CategoryEntity.cs" />
+    <Compile Include="AutoCode\Email_ContentEntity.cs" />
+    <Compile Include="AutoCode\IM_ContentEntity.cs" />
+    <Compile Include="AutoCode\IM_GroupEntity.cs" />
+    <Compile Include="AutoCode\IM_ReadEntity.cs" />
+    <Compile Include="AutoCode\IM_UserGroupEntity.cs" />
+    <Compile Include="AutoCode\Rpt_TempEntity.cs" />
+    <Compile Include="AutoCode\TestFlow_LeaveslipEntity.cs" />
+    <Compile Include="AutoCode\Wechat_AppEntity.cs">
+      <DependentUpon>zCeisenEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Wechat_DeptrelationEntity.cs">
+      <DependentUpon>zCeisenEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Wechat_UserRelationEntity.cs">
+      <DependentUpon>zCeisenEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\WF_DelegateRecordEntity.cs" />
+    <Compile Include="AutoCode\WF_DelegateRuleEntity.cs" />
+    <Compile Include="AutoCode\WF_DelegateRuleSchemeInfoEntity.cs" />
+    <Compile Include="AutoCode\WF_FrmMainEntity.cs" />
+    <Compile Include="AutoCode\WF_ProcessInstanceEntity.cs" />
+    <Compile Include="AutoCode\WF_ProcessOperationHistoryEntity.cs" />
+    <Compile Include="AutoCode\WF_ProcessSchemeEntity.cs" />
+    <Compile Include="AutoCode\WF_ProcessTransitionHistoryEntity.cs" />
+    <Compile Include="AutoCode\WF_SchemeContentEntity.cs" />
+    <Compile Include="AutoCode\WF_SchemeInfoAuthorizeEntity.cs">
+      <DependentUpon>zCeisenEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\WF_SchemeInfoEntity.cs">
+      <DependentUpon>zCeisenEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\zCeisenEntity.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>zCeisenEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaseEntity.cs" />
+    <Compile Include="Pagination.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AutoCode\zCeisenEntity.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>zCeisenEntity.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

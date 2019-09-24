@@ -1,0 +1,63 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ include file="EF.Utility.CS.ttinclude"#>
+
+<#@ assembly name="System.Data.DataSetExtensions.dll" #>
+<#@ assembly name="MySql.Data"#>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="MySql.Data.MySqlClient" #>
+<#@ include file="$(SolutionDir)src\T4\manager.ttinclude" #>
+<#@ include file="$(SolutionDir)src\T4\DbHelper.ttinclude"  #>
+
+<# var manager = new Manager(Host, GenerationEnvironment, true) { OutputPath = Path.GetDirectoryName(Host.TemplateFile) }; #>
+<# foreach(Entity  entity in new DbHelper().GetEntities(config.ConnectionString, new List<string>(){config.DbDatabase}))
+{   
+	string item = entity.EntityName;
+	manager.StartBlock(item+"BLL.cs");
+#>
+/**
+*┌──────────────────────────────────────────────────────────────┐
+*│　描    述：无                                                    
+*│　作    者：zhuhj                                              
+*│　版    本：1.0   模板代码自动生成                                              
+*│　创建时间：<#=DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")#>                            
+*└──────────────────────────────────────────────────────────────┘
+*┌──────────────────────────────────────────────────────────────┐
+*│　命名空间:Hulu.Application.BLL                              
+*│　类   名:<#=item#>BLL                               
+*└──────────────────────────────────────────────────────────────┘
+*/
+using System;
+using System.Collections.Generic;
+using System.Text;
+using Hulu.Data.Repository;
+using Hulu.Application.IService;
+using Hulu.Util.Model;
+
+namespace Hulu.Application.Service
+{	
+	/// <summary>
+	/// I<#=item#>Service
+	/// </summary>	
+	public partial class <#=item#>BLL
+    {
+		private I<#=item#>Service service = new <#=item#>Service();
+        /// <summary>
+        /// GetList
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<<#=item#>Entity> GetList()
+        {
+            return service.GetList_Auto();
+        }
+    }
+}
+
+<# manager.EndBlock();
+}
+ manager.Process(true);#>
+
+
+
+
+
