@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>8517a90e-a32f-4d8c-88d7-22d1d78b2de8</ProjectGuid>
+    <ProjectGuid>{8517A90E-A32F-4D8C-88D7-22D1D78B2DE8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Hulu.Application.BLL</RootNamespace>
@@ -31,24 +31,281 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="AutoCode\aaTemplate.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="AutoCode\Base_AreaBLL.cs" />
+    <Compile Include="AutoCode\Base_AuthorizeBLL.cs" />
+    <Compile Include="AutoCode\Base_AuthorizeDataBLL.cs" />
+    <Compile Include="AutoCode\Base_CodeRuleBLL.cs" />
+    <Compile Include="AutoCode\Base_CodeRuleSeedBLL.cs" />
+    <Compile Include="AutoCode\Base_DataBaseBackupBLL.cs" />
+    <Compile Include="AutoCode\Base_DataDaseLinkBLL.cs" />
+    <Compile Include="AutoCode\Base_DataItemBLL.cs" />
+    <Compile Include="AutoCode\Base_DataItemDetailBLL.cs" />
+    <Compile Include="AutoCode\Base_DepartmentBLL.cs" />
+    <Compile Include="AutoCode\Base_FileFolderBLL.cs" />
+    <Compile Include="AutoCode\Base_FileInfoBLL.cs" />
+    <Compile Include="AutoCode\Base_FilterIpBLL.cs" />
+    <Compile Include="AutoCode\Base_FilterTimeBLL.cs" />
+    <Compile Include="AutoCode\Base_LogBLL.cs" />
+    <Compile Include="AutoCode\Base_ModuleBLL.cs" />
+    <Compile Include="AutoCode\Base_ModuleButtonBLL.cs" />
+    <Compile Include="AutoCode\Base_ModuleColumnBLL.cs" />
+    <Compile Include="AutoCode\Base_ModuleFormBLL.cs" />
+    <Compile Include="AutoCode\Base_ModuleFormInstanceBLL.cs" />
+    <Compile Include="AutoCode\Base_NewsBLL.cs" />
+    <Compile Include="AutoCode\Base_OrganizeBLL.cs" />
+    <Compile Include="AutoCode\Base_RoleBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Base_ScheduleBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Base_UserBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Base_UserRelationBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Client_CashBalanceBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Client_ChanceBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Client_ChanceService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Client_CustomerBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Client_CustomerContactBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Client_CustomerContactService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Client_CustomerService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Client_ExpensesBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Client_ExpensesService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Client_InvoiceBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Client_InvoiceService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Client_OrderBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Client_OrderEntryBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Client_OrderEntryService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Client_OrderService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Client_ReceivableBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Client_ReceivableService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Client_TrailRecordBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Client_TrailRecordService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Email_AddresseeBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Email_AddresseeService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Email_CategoryBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Email_CategoryService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Email_ContentBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Email_ContentService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\IM_ContentBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\IM_ContentService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\IM_GroupBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\IM_GroupService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\IM_ReadBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\IM_ReadService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\IM_UserGroupBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\IM_UserGroupService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Rpt_TempBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Rpt_TempService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\TestFlow_LeaveslipBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\TestFlow_LeaveslipService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Wechat_AppBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Wechat_AppService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Wechat_DeptrelationBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Wechat_DeptrelationService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Wechat_UserRelationBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\Wechat_UserRelationService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\WF_DelegateRecordBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\WF_DelegateRecordService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\WF_DelegateRuleBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\WF_DelegateRuleSchemeInfoBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\WF_DelegateRuleSchemeInfoService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\WF_DelegateRuleService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\WF_FrmMainBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\WF_FrmMainService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\WF_ProcessInstanceBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\WF_ProcessInstanceService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\WF_ProcessOperationHistoryBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\WF_ProcessOperationHistoryService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\WF_ProcessSchemeBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\WF_ProcessSchemeService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\WF_ProcessTransitionHistoryBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\WF_ProcessTransitionHistoryService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\WF_SchemeContentBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\WF_SchemeContentService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\WF_SchemeInfoAuthorizeBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\WF_SchemeInfoAuthorizeService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\WF_SchemeInfoBLL.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCode\WF_SchemeInfoService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="AutoCode\aaTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>aaTemplate.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SelfCode\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Hulu.Data.Repository\Hulu.Data.Repository.csproj">
+      <Project>{11921a36-95ae-4db6-a977-f60b94157b17}</Project>
+      <Name>Hulu.Data.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Hulu.Util.Model\Hulu.Util.Model.csproj">
+      <Project>{11af6c78-bf65-4e31-80ad-bab75946fdd2}</Project>
+      <Name>Hulu.Util.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hulu.Application.IService\Hulu.Application.IService.csproj">
+      <Project>{8a96a08e-bf13-4701-94e6-86d78a7913c1}</Project>
+      <Name>Hulu.Application.IService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hulu.Application.Service\Hulu.Application.Service.csproj">
+      <Project>{df39a3f7-5386-41f9-bb2c-c2c5c4ee7e29}</Project>
+      <Name>Hulu.Application.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>

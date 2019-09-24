@@ -70,7 +70,9 @@
     <Compile Include="AutoCode\IClient_CashBalanceService.cs" />
     <Compile Include="AutoCode\IClient_ChanceService.cs" />
     <Compile Include="AutoCode\IClient_CustomerContactService.cs" />
-    <Compile Include="AutoCode\IClient_CustomerService.cs" />
+    <Compile Include="AutoCode\IClient_CustomerService.cs">
+      <DependentUpon>aaTemplate.tt</DependentUpon>
+    </Compile>
     <Compile Include="AutoCode\IClient_ExpensesService.cs" />
     <Compile Include="AutoCode\IClient_InvoiceService.cs" />
     <Compile Include="AutoCode\IClient_OrderEntryService.cs" />

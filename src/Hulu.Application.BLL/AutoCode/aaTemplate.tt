@@ -30,14 +30,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Hulu.Data.Repository;
 using Hulu.Application.IService;
+using Hulu.Application.Service;
 using Hulu.Util.Model;
 
-namespace Hulu.Application.Service
+namespace Hulu.Application.BLL
 {	
 	/// <summary>
-	/// I<#=item#>Service
+	/// <#=item#>BLL
 	/// </summary>	
 	public partial class <#=item#>BLL
     {
